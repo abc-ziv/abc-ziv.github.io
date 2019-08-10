@@ -94,18 +94,27 @@
 
 
 
-  <meta name="description" content="性能—响应时间决定用户浏览器端： 浏览器缓存； 使用页面压缩； PS：Gzip压缩效率非常高，通常可以达到70%的压缩率，也就是说，如果你的网页有30K，压缩之后就变成了9K左右。想要启用Gzip压缩，提高浏览速度，可以浏览这篇文章：http://www.chinaz.com/web/2012/1017/278682.shtml">
+  <meta name="description" content="可用性度量与考核首先，不得不说：要保证一个网站永远完全可用几乎是一件不可能完成的任务。 如何度量网站可用性？一个神奇的数字—9！你有几个9，就代表了你的可用性。例如QQ可用性达到了4个9：99.99%  2个9=基本可用　　 3个9=较高可用　　 4个9=具有自动恢复能力的高可用　　 5个9=极高可用-&amp;gt;理想状态">
 <meta name="keywords" content="watch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《大型网站技术架构》-- 大型网站核心架构要素">
-<meta property="og:url" content="http://yoursite.com/2019/08/02/2019-08-03-CoreArchitecturalElementsofLargeWebsites/index.html">
+<meta property="og:title" content="《大型网站技术架构》-- 网站的高可用架构">
+<meta property="og:url" content="http://yoursite.com/2019/08/05/2019-08-05-HighAvailabilityArchitecture/index.html">
 <meta property="og:site_name" content="吴藏的博客">
-<meta property="og:description" content="性能—响应时间决定用户浏览器端： 浏览器缓存； 使用页面压缩； PS：Gzip压缩效率非常高，通常可以达到70%的压缩率，也就是说，如果你的网页有30K，压缩之后就变成了9K左右。想要启用Gzip压缩，提高浏览速度，可以浏览这篇文章：http://www.chinaz.com/web/2012/1017/278682.shtml">
+<meta property="og:description" content="可用性度量与考核首先，不得不说：要保证一个网站永远完全可用几乎是一件不可能完成的任务。 如何度量网站可用性？一个神奇的数字—9！你有几个9，就代表了你的可用性。例如QQ可用性达到了4个9：99.99%  2个9=基本可用　　 3个9=较高可用　　 4个9=具有自动恢复能力的高可用　　 5个9=极高可用-&amp;gt;理想状态">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-03T14:47:24.785Z">
+<meta property="og:image" content="http://yoursite.com/images/Framework/019.png">
+<meta property="og:image" content="http://yoursite.com/images/Framework/020.jpg">
+<meta property="og:image" content="http://yoursite.com/images/Framework/021.jpg">
+<meta property="og:image" content="http://yoursite.com/images/Framework/022.jpg">
+<meta property="og:image" content="http://yoursite.com/images/Framework/023.jpg">
+<meta property="og:image" content="http://yoursite.com/images/Framework/024.jpg">
+<meta property="og:image" content="http://yoursite.com/images/Framework/025.jpg">
+<meta property="og:image" content="http://yoursite.com/images/Framework/026.jpg">
+<meta property="og:updated_time" content="2019-08-10T07:17:58.276Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《大型网站技术架构》-- 大型网站核心架构要素">
-<meta name="twitter:description" content="性能—响应时间决定用户浏览器端： 浏览器缓存； 使用页面压缩； PS：Gzip压缩效率非常高，通常可以达到70%的压缩率，也就是说，如果你的网页有30K，压缩之后就变成了9K左右。想要启用Gzip压缩，提高浏览速度，可以浏览这篇文章：http://www.chinaz.com/web/2012/1017/278682.shtml">
+<meta name="twitter:title" content="《大型网站技术架构》-- 网站的高可用架构">
+<meta name="twitter:description" content="可用性度量与考核首先，不得不说：要保证一个网站永远完全可用几乎是一件不可能完成的任务。 如何度量网站可用性？一个神奇的数字—9！你有几个9，就代表了你的可用性。例如QQ可用性达到了4个9：99.99%  2个9=基本可用　　 3个9=较高可用　　 4个9=具有自动恢复能力的高可用　　 5个9=极高可用-&amp;gt;理想状态">
+<meta name="twitter:image" content="http://yoursite.com/images/Framework/019.png">
 
 
 
@@ -113,7 +122,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/08/02/2019-08-03-CoreArchitecturalElementsofLargeWebsites/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/05/2019-08-05-HighAvailabilityArchitecture/">
 
 
 
@@ -123,7 +132,7 @@
   };
 </script>
 
-  <title>《大型网站技术架构》-- 大型网站核心架构要素 | 吴藏的博客</title>
+  <title>《大型网站技术架构》-- 网站的高可用架构 | 吴藏的博客</title>
   
 
 
@@ -351,7 +360,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/02/2019-08-03-CoreArchitecturalElementsofLargeWebsites/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/05/2019-08-05-HighAvailabilityArchitecture/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ziv">
@@ -368,7 +377,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">《大型网站技术架构》-- 大型网站核心架构要素
+          <h1 class="post-title" itemprop="name headline">《大型网站技术架构》-- 网站的高可用架构
 
               
             
@@ -394,7 +403,7 @@
                 
               
 
-              <time title="创建时间：2019-08-02 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-02T00:00:00+08:00">2019-08-02</time>
+              <time title="创建时间：2019-08-05 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-05T00:00:00+08:00">2019-08-05</time>
             
 
             
@@ -411,7 +420,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-03 22:47:24" itemprop="dateModified" datetime="2019-08-03T22:47:24+08:00">2019-08-03</time>
+                <time title="修改时间：2019-08-10 15:17:58" itemprop="dateModified" datetime="2019-08-10T15:17:58+08:00">2019-08-10</time>
               
             
           </span>
@@ -447,8 +456,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/08/02/2019-08-03-CoreArchitecturalElementsofLargeWebsites/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/02/2019-08-03-CoreArchitecturalElementsofLargeWebsites/" itemprop="commentCount"></span>
+                <a href="/2019/08/05/2019-08-05-HighAvailabilityArchitecture/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/05/2019-08-05-HighAvailabilityArchitecture/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -456,7 +465,7 @@
 
           
           
-            <span id="/2019/08/02/2019-08-03-CoreArchitecturalElementsofLargeWebsites/" class="leancloud_visitors" data-flag-title="《大型网站技术架构》-- 大型网站核心架构要素">
+            <span id="/2019/08/05/2019-08-05-HighAvailabilityArchitecture/" class="leancloud_visitors" data-flag-title="《大型网站技术架构》-- 网站的高可用架构">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -481,7 +490,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.8k</span>
+                <span title="本文字数">3.5k</span>
               
 
               
@@ -495,7 +504,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">3 分钟</span>
               
             </div>
           
@@ -515,60 +524,96 @@
       
 
       
-        <h1 id="性能—响应时间决定用户"><a href="#性能—响应时间决定用户" class="headerlink" title="性能—响应时间决定用户"></a>性能—响应时间决定用户</h1><h2 id="浏览器端："><a href="#浏览器端：" class="headerlink" title="浏览器端："></a>浏览器端：</h2><ol>
-<li>浏览器缓存；</li>
-<li>使用页面压缩；<blockquote>
-<p>PS：Gzip压缩效率非常高，通常可以达到70%的压缩率，也就是说，如果你的网页有30K，压缩之后就变成了9K左右。想要启用Gzip压缩，提高浏览速度，可以浏览这篇文章：<a href="http://www.chinaz.com/web/2012/1017/278682.shtml" target="_blank" rel="noopener">http://www.chinaz.com/web/2012/1017/278682.shtml</a></p>
+        <h1 id="可用性度量与考核"><a href="#可用性度量与考核" class="headerlink" title="可用性度量与考核"></a>可用性度量与考核</h1><p>首先，不得不说：要保证一个网站永远完全可用几乎是一件<code>不可能完成的任务</code>。</p>
+<h2 id="如何度量网站可用性？"><a href="#如何度量网站可用性？" class="headerlink" title="如何度量网站可用性？"></a>如何度量网站可用性？</h2><p>一个神奇的数字—9！你有几个9，就代表了你的可用性。例如QQ可用性达到了4个9：99.99%</p>
+<ol>
+<li>2个9=基本可用　　</li>
+<li>3个9=较高可用　　</li>
+<li>4个9=具有自动恢复能力的高可用　　</li>
+<li>5个9=极高可用-&gt;理想状态<a id="more"></a>
+
+</li>
+</ol>
+<p>那么，可用性的9又是怎么计算出来的呢：</p>
+<ol>
+<li>网站不可用时间=故障修复时间点-故障发现时间点</li>
+<li>网站年度可用性指标=（1-网站不可用时间/年度总时间）*100%</li>
+</ol>
+<h2 id="如何考核网站可用性？"><a href="#如何考核网站可用性？" class="headerlink" title="如何考核网站可用性？"></a>如何考核网站可用性？</h2><p>广泛采用<code>故障分</code>的，它是对网站故障进行分类加权计算故障责任的方法。一般会给每个分类的故障设置一个权重（例如事故级故障权重为100，A类为20等），其计算公式为：故障分=故障时间（分钟）*故障权重。公司对技术团队的考核一般会参考故障分，例如某团队今年发生了几个事故级故障，那么其绩效考核估计受到很大影响，年终奖什么的就悲剧了。</p>
+<h1 id="高可用的架构"><a href="#高可用的架构" class="headerlink" title="高可用的架构"></a>高可用的架构</h1><p>目前，通常企业级应用系统（特别是政府部门和大企业的应用系统）一般会采用安规的软硬件设备，如IOE（IBM的小型机、Oracle数据、EMC存储设备）系列。而一般互联网公司更多地采用PC级服务器（x86），开源的数据库（MySQL）和操作系统（Linux）组建廉价且高容错<code>（硬件故障是常态）</code>的应用集群。</p>
+<h2 id="设计的目的？"><a href="#设计的目的？" class="headerlink" title="设计的目的？"></a>设计的目的？</h2><p>保证服务器硬件故障服务依然可用，数据依然保存并能够被访问。</p>
+<h2 id="主要的手段？"><a href="#主要的手段？" class="headerlink" title="主要的手段？"></a>主要的手段？</h2><p>数据和服务的</p>
+<ol>
+<li><code>冗余备份以及</code></li>
+<li><code>失效转移</code></li>
+</ol>
+<p>对于服务而言，一旦某个服务器宕机，就将服务切换到其他可用的服务器上；<br>对于数据而言，如果某个磁盘损坏，就从备份的磁盘（事先就做好了数据的同步复制）读取数据。</p>
+<h1 id="高可用的应用"><a href="#高可用的应用" class="headerlink" title="高可用的应用"></a>高可用的应用</h1><p>应用层处理网站应用的业务逻辑，应用的一个最显著的特点是：<code>应用的无状态性</code>。
+<img src="/images/Framework/019.png"></p>
+<blockquote>
+<p>PS：提到无状态特性，不得不说下Http协议。我们常常听到说，Http是一个无状态协议，同一个会话的连续两个请求互相不了解，他们由最新实例化的环境进行解析，除了应用本身可能已经存储在全局对象中的所有信息外，该环境不保存与会话有关的任何信息。之所以我们在使用ASP.NET WebForm开发中会感觉不到Http的无状态特性，完全是因为Microsoft帮我们实现了ViewState，它是ASP.NET WebForm中保存页面信息的基本单位，本质是一个HTML中的隐藏域，回调时会将这个隐藏域中的数据提交到服务器端。 　</p>
 </blockquote>
-<a id="more"></a></li>
-<li>合理布局页面；</li>
+<h2 id="通过负载均衡进行无状态服务的失效转移"><a href="#通过负载均衡进行无状态服务的失效转移" class="headerlink" title="通过负载均衡进行无状态服务的失效转移"></a>通过负载均衡进行无状态服务的失效转移</h2><img src="/images/Framework/020.jpg">
+
+<h2 id="应用服务器集群的Session管理"><a href="#应用服务器集群的Session管理" class="headerlink" title="应用服务器集群的Session管理"></a>应用服务器集群的Session管理</h2><p>首先，不得不说的是：Web应用中将上下文对象称为会话（Session），单机情况下由部署在服务器上得Web容器（如IIS、Tomcat、JBoss等）管理。在使用了负载均衡的集群环境中，由于请求的分发是随机的，所以保证每次请求依然能够获得正确的Session比单机时要复杂得多。</p>
+<p>其次，我们来看看在集群环境中，Session管理的几种常见手段。</p>
+<ol>
+<li><p>Session复制：该方案简单易行，集群中的几台服务器之间同步Session对象，任何一台服务器宕机都不会导致Session对象的丢失，服务器也只需要从本机获取即可。但是，该方案只适合<code>集群规模较小</code>的情况下。当规模较大时，大量的Session复制操作会占用服务器和网络的大量资源，系统不堪重负。</p>
+<img src="/images/Framework/021.jpg">
+</li>
+<li><p>Session绑定：利用负载均衡的源地址<code>Hash算法</code>，总是将源于同一IP地址的请求分发到同一台服务器上。这样的话，在整个会话期间，用户所有的请求都在同一台服务器上进行处理，即Session绑定在某台特定服务器上，保证Session总能在这台服务器上获取。（这种方案又叫做会话粘滞）。</p>
+<img src="/images/Framework/022.jpg">
+但是，这种方案`不符合高可用的需求`。因为一旦某台服务器宕机，那么该机器上得Session也就不复存在了，用户请求切换到其他机器后因为没有Session而无法完成业务处理。因此，很少有网站采用此方案进行Session管理。
+</li>
+<li><p>Cookie记录Session：利用浏览器支持的Cookie记录Session简单易行，可用性高，并且支持服务器的线性伸缩，因此，许多网站都或多或少地使用了Cookie来记录Session。但是Cookie记录Session有缺点：比如受Cookie大小限制、每次请求响应都要传输Cookie影响性能、用户关闭了Cookie会造成访问不正常等。</p>
+<img src="/images/Framework/023.jpg">
+</li>
+<li><p>Session服务器：利用独立部署的Session服务器（集群）统一管理Session，应用服务器每次读写Session时，都访问Session服务器。这种方案实际上是将应用服务器的状态分离，分为无状态的应用服务器和有状态的Session服务器。</p>
+<img src="/images/Framework/024.jpg">
+对于，有状态的Session服务器，一种较简单的方法是利用`分布式缓存`（如Memcached、Redis等）、数据库等，在这些产品的基础上进行封装，使其符合Session的存储和访问要求。
+
+</li>
 </ol>
-<ul>
-<li>CSS：<code>把样式表置于顶部；避免使用CSS表达式（expression_r）；</code>使用外部JavaScript和CSS；削减JavaScript和CSS；用<link>代替@import；避免使用滤镜；</li>
-<li>JavaScript：<code>把脚本置于页面底部；</code>使用外部JavaScript和CSS；削减JavaScript和CSS；<code>剔除重复脚本；减少DOM访问；</code>开发智能事件处理程序；</li>
-</ul>
-<ol start="4">
-<li>减少Cookie传输；</li>
-</ol>
-<h2 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h2><p>内容分发网络（Content Delivery Network，简称CDN）将加速内容分发至离用户最近的节点，缩短用户查看对象的延迟，提高用户访问网站的响应速度与网站的可用性，解决网络带宽小、用户访问量大、网点分布不均等问题。详情请见百度百科：<a href="http://baike.baidu.com/view/8689800.htm?from_id=420951&type=search&fromtitle=CDN&fr=aladdin" target="_blank" rel="noopener">http://baike.baidu.com/view/8689800.htm?from_id=420951&amp;type=search&amp;fromtitle=CDN&amp;fr=aladdin</a></p>
-<h2 id="应用服务器端"><a href="#应用服务器端" class="headerlink" title="应用服务器端"></a>应用服务器端</h2><p>服务器本地缓存和分布式缓存；</p>
-<ul>
-<li>Memcached简介：<a href="http://baike.baidu.com/view/794242.htm" target="_blank" rel="noopener">http://baike.baidu.com/view/794242.htm</a></li>
-<li>Redis简介：<a href="http://baike.baidu.com/view/4595959.htm" target="_blank" rel="noopener">http://baike.baidu.com/view/4595959.htm</a></li>
-</ul>
-<h2 id="服务器集群技术"><a href="#服务器集群技术" class="headerlink" title="服务器集群技术"></a>服务器集群技术</h2><p>Web服务器集群、数据库服务器集群、分布式缓存服务器集群等等，通过部署多台服务器共同对外提供同类服务，提高整体处理能力。</p>
-<h2 id="数据库服务器端"><a href="#数据库服务器端" class="headerlink" title="数据库服务器端"></a>数据库服务器端</h2><ol>
-<li>索引：索引（index）是对数据库表中一个或多个列（例如，employee 表的姓氏 (name) 列）的值进行排序的结构。如果想按特定职员的姓来查找他或她，则与在表中搜索所有的行相比，索引有助于更快地获取信息。<blockquote>
-<p> PS：要注意的是，建立太多的索引将会影响更新和插入的速度，因为它需要同样更新每个索引文件。</p>
+<h1 id="高可用的服务"><a href="#高可用的服务" class="headerlink" title="高可用的服务"></a>高可用的服务</h1><p>高可用的服务模块为业务产品提供基础公共服务，在大型站点中这些服务通常都独立分布式部署，被具体应用远程调用。<br>在具体实践中，有以下几点高可用的服务策略可以参考：</p>
+<ol>
+<li><p>分级管理：核心应用和服务具有更高的优先级，比如用户及时付款比能否评价商品更重要；</p>
+</li>
+<li><p>超时设置：设置服务调用的超时时间，一旦超时后，通信框架抛出异常，应用程序则根据服务调度策略选择重试or请求转移到其他服务器上；</p>
+</li>
+<li><p>异步调用：通过消息队列等异步方式完成，避免一个服务失败导致整个应用请求失败的情况。</p>
+<blockquote>
+<p>PS：不是所有服务都可以异步调用，对于获取用户信息这类调用，采用异步方式会延长响应时间，得不偿失。对于那些必须确认服务调用成功后才能继续进行下一步的操作的应用也不适合异步调用。</p>
 </blockquote>
 </li>
-<li>缓存：数据库缓存是介于应用程序和物理数据源之间，其作用是为了降低应用程序对数据库的物理数据源访问的频次，从而提高了应用的运行性能。</li>
-<li>SQL优化：当一个基于数据库的应用程序运行起来很慢时，90%的可能都是由于数据访问程序的问题，要么是没有优化，要么是没有按最佳方法编写代码，因此你需要审查和优化你的数据访问/处理程序。具体可以浏览这篇文章：<a href="http://www.cnblogs.com/Shaina/archive/2012/04/22/2464576.html" target="_blank" rel="noopener">T- SQL性能优化详解</a></li>
-<li>NoSQL：方兴未艾的NoSQL数据库通过优化数据模型、存储结构、伸缩性等手段在性能方面的优势日趋明显。</li>
+<li><p>服务降级：网站访问高峰期间，为了保证核心应用的正常运行，需要对服务降级。<br>降级有两种手段：一是拒绝服务，拒绝较低优先级的应用的调用，减少服务调用并发数，确保核心应用的正常运行；二是关闭功能，关闭部分不重要的服务，或者服务内部关闭部分不重要的功能，以节约系统开销，为核心应用服务让出资源；</p>
+</li>
+<li><p>幂等性设计：保证服务重复调用和调用一次产生的结果相同；</p>
+</li>
 </ol>
-<h1 id="可用性—你能保证几个9？"><a href="#可用性—你能保证几个9？" class="headerlink" title="可用性—你能保证几个9？"></a>可用性—你能保证几个9？</h1><h2 id="如何衡量可用性？"><a href="#如何衡量可用性？" class="headerlink" title="如何衡量可用性？"></a>如何衡量可用性？</h2><p>全靠9来撑腰：几乎所有网站都承诺7*24小时可用，但事实上都不可能完全实现，总会有一些故障时间。那么，去除这些故障时间就是网站的总可用时间。换算成网站的可用性指标，以此衡量网站的可用性，例如某些知名网站可用性达到99.99%。</p>
-<h2 id="哪些手段提高可用性？"><a href="#哪些手段提高可用性？" class="headerlink" title="哪些手段提高可用性？"></a>哪些手段提高可用性？</h2><ol>
-<li>核心：冗余-各服务器互相备份保证整体可用；</li>
-<li>应用服务器端：通过负载均衡设备建立集群，其中一台宕机立即切换到其他服务器继续提供服务，这就保证了高可用性。</li>
-<li>存储服务器端：需要对数据进行实时备份，当某台宕机立即将数据访问请求转换到其他服务器上，并进行数据恢复以保证数据高可用。</li>
+<h1 id="高可用的数据"><a href="#高可用的数据" class="headerlink" title="高可用的数据"></a>高可用的数据</h1><p>对于大多数网站而言，数据是其最宝贵的物质资产。<br>保证数据高可用的主要手段有两种：<code>一是数据备份</code>，<code>二是失效转移机制</code>；</p>
+<h2 id="数据备份："><a href="#数据备份：" class="headerlink" title="数据备份："></a>数据备份：</h2><p>又分为冷备份和热备份，冷备份是定期复制，不能保证数据可用性。热备份又分为异步热备和同步热备，异步热备是指多份数据副本的写入操作异步完成，而同步方式则是指多份数据副本的写入操作同时完成。<br>关系数据库的热备机制就是通常所说的主从同步机制，实践中通常使用读写分离的方法来访问Master和Slave数据库，也就是说写操作只访问Master库，读操作均访问Slave库。<br><img src="/images/Framework/025.jpg"></p>
+<blockquote>
+<p>PS：在MS SQL Server中，可以通过发布订阅功能实现主从分离。关于发布订阅，可以参考MSDN的这篇文章：<a href="http://technet.microsoft.com/zh-cn/ff806143.aspx" target="_blank" rel="noopener">http://technet.microsoft.com/zh-cn/ff806143.aspx
+</a></p>
+</blockquote>
+<h2 id="②失效转移："><a href="#②失效转移：" class="headerlink" title="②失效转移："></a>②失效转移：</h2><p>若数据服务器集群中任何一台服务器宕机，那么应用程序针对这台服务器的所有读写操作都要重新路由到其他服务器，保证数据访问不会失败。<br><img src="/images/Framework/026.jpg"></p>
+<h1 id="高可用的QA"><a href="#高可用的QA" class="headerlink" title="高可用的QA"></a>高可用的QA</h1><ol>
+<li>网站发布：在柔性的发布过程中，每次关闭的服务都是集群中的一小部分，并在发布完成后立即可以访问；</li>
+<li>自动化测试：使用自动测试工具或脚本完成测试；</li>
+<li>预发布验证：引入预发布服务器，与正式服务器几乎一致，只是没有配置在负载均衡服务器上，外部用户无法访问；</li>
+<li>代码控制：目前大多数网站采用SVN，分支开发，主干发布模式；另外，目前开源社区广泛采用Git作为版本控制工具，正逐步取代SVN的地位；</li>
 </ol>
-<h1 id="伸缩性—能屈能伸方为大丈夫"><a href="#伸缩性—能屈能伸方为大丈夫" class="headerlink" title="伸缩性—能屈能伸方为大丈夫"></a>伸缩性—能屈能伸方为大丈夫</h1><h2 id="衡量标准："><a href="#衡量标准：" class="headerlink" title="衡量标准："></a>衡量标准：</h2><ol>
-<li>是否可以多态服务器构建集群？</li>
-<li>是否容易向集群中添加新服务器？</li>
-<li>加入服务器后是否能提供无差别服务？</li>
+<h1 id="网站运行监控"><a href="#网站运行监控" class="headerlink" title="网站运行监控"></a>网站运行监控</h1><p><code>”不允许没有监控的系统上线“</code></p>
+<h2 id="监控数据采集"><a href="#监控数据采集" class="headerlink" title="监控数据采集"></a>监控数据采集</h2><ol>
+<li>用户行为日志收集：服务器端的日志收集和客户端的日志收集；目前许多网站逐步开发基于实时计算框架Storm的日志统计与分析工具；</li>
+<li>服务器性能监控：收集服务器性能指标，如系统Load、内存占用、磁盘IO等，及时判断，防患于未然；</li>
+<li>运行数据报告：采集并报告，汇总后统一显示，应用程序需要在代码中处理运行数据采集的逻辑；</li>
 </ol>
-<h2 id="主要手段："><a href="#主要手段：" class="headerlink" title="主要手段："></a>主要手段：</h2><ol>
-<li>应用服务器：使用合适的负载均衡设备（硬件还是软件？F5还是LVS+KeepAlived）；</li>
-<li>缓存服务器：改进缓存路由算法保证缓存数据的可访问性；</li>
-<li>数据库服务器：通过路由区分等手段将多服务器组成一个集群；</li>
+<h2 id="监控管理"><a href="#监控管理" class="headerlink" title="监控管理"></a>监控管理</h2><ol>
+<li>系统报警：配置报警阀值和值守人员联系方式，系统发生报警时，即使工程师在千里之外，也可以被及时通知；</li>
+<li>失效转移：监控系统在发现故障时，主动通知应用进行失效转移；</li>
+<li>自动优雅降级：为了应付网站访问高峰，主动关闭部分功能，释放部分系统资源，保证核心应用服务的正常运行；—&gt;网站柔性架构的理想状态</li>
 </ol>
-<h1 id="扩展性—不痛不痒之间新业务就上线了"><a href="#扩展性—不痛不痒之间新业务就上线了" class="headerlink" title="扩展性—不痛不痒之间新业务就上线了"></a>扩展性—不痛不痒之间新业务就上线了</h1><h2 id="衡量标准：-1"><a href="#衡量标准：-1" class="headerlink" title="衡量标准："></a>衡量标准：</h2><p>增加新业务时是否可以实现对现有产品透明无影响（是否需要对现有业务进行修改匹配？）；</p>
-<h2 id="主要手段：-1"><a href="#主要手段：-1" class="headerlink" title="主要手段："></a>主要手段：</h2><ol>
-<li>事件驱动架构：利用消息队列实现；</li>
-<li>分布式服务：将业务和可复用服务分离；</li>
-</ol>
-<h1 id="安全性—妈妈再也不用担心的我的照片了"><a href="#安全性—妈妈再也不用担心的我的照片了" class="headerlink" title="安全性—妈妈再也不用担心的我的照片了"></a>安全性—妈妈再也不用担心的我的照片了</h1><h2 id="何为安全性？"><a href="#何为安全性？" class="headerlink" title="何为安全性？"></a>何为安全性？</h2><p>保护网站不受恶意访问和攻击，保护网站的重要数据不被窃取；</p>
-<h2 id="衡量标准：-2"><a href="#衡量标准：-2" class="headerlink" title="衡量标准："></a>衡量标准：</h2><p>针对现存和潜在的攻击窃密手段，是否有可靠的应对策略；</p>
 
       
     </div>
@@ -608,8 +653,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/02/2019-08-02-LargeWebsiteArchitectureModel/" rel="next" title="《大型网站技术架构》-- 大型网站架构模式">
-                <i class="fa fa-chevron-left"></i> 《大型网站技术架构》-- 大型网站架构模式
+              <a href="/2019/08/04/2019-08-04-HighPerformance/" rel="next" title="《大型网站技术架构》-- 网站的高性能架构">
+                <i class="fa fa-chevron-left"></i> 《大型网站技术架构》-- 网站的高性能架构
               </a>
             
           </div>
@@ -689,7 +734,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">48</span>
+                    <span class="site-state-item-count">50</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -801,7 +846,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#性能—响应时间决定用户"><span class="nav-number">1.</span> <span class="nav-text">性能—响应时间决定用户</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器端："><span class="nav-number">1.1.</span> <span class="nav-text">浏览器端：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CDN"><span class="nav-number">1.2.</span> <span class="nav-text">CDN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用服务器端"><span class="nav-number">1.3.</span> <span class="nav-text">应用服务器端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务器集群技术"><span class="nav-number">1.4.</span> <span class="nav-text">服务器集群技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库服务器端"><span class="nav-number">1.5.</span> <span class="nav-text">数据库服务器端</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可用性—你能保证几个9？"><span class="nav-number">2.</span> <span class="nav-text">可用性—你能保证几个9？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何衡量可用性？"><span class="nav-number">2.1.</span> <span class="nav-text">如何衡量可用性？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#哪些手段提高可用性？"><span class="nav-number">2.2.</span> <span class="nav-text">哪些手段提高可用性？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#伸缩性—能屈能伸方为大丈夫"><span class="nav-number">3.</span> <span class="nav-text">伸缩性—能屈能伸方为大丈夫</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#衡量标准："><span class="nav-number">3.1.</span> <span class="nav-text">衡量标准：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要手段："><span class="nav-number">3.2.</span> <span class="nav-text">主要手段：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#扩展性—不痛不痒之间新业务就上线了"><span class="nav-number">4.</span> <span class="nav-text">扩展性—不痛不痒之间新业务就上线了</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#衡量标准：-1"><span class="nav-number">4.1.</span> <span class="nav-text">衡量标准：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要手段：-1"><span class="nav-number">4.2.</span> <span class="nav-text">主要手段：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安全性—妈妈再也不用担心的我的照片了"><span class="nav-number">5.</span> <span class="nav-text">安全性—妈妈再也不用担心的我的照片了</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#何为安全性？"><span class="nav-number">5.1.</span> <span class="nav-text">何为安全性？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#衡量标准：-2"><span class="nav-number">5.2.</span> <span class="nav-text">衡量标准：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#可用性度量与考核"><span class="nav-number">1.</span> <span class="nav-text">可用性度量与考核</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何度量网站可用性？"><span class="nav-number">1.1.</span> <span class="nav-text">如何度量网站可用性？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何考核网站可用性？"><span class="nav-number">1.2.</span> <span class="nav-text">如何考核网站可用性？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高可用的架构"><span class="nav-number">2.</span> <span class="nav-text">高可用的架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设计的目的？"><span class="nav-number">2.1.</span> <span class="nav-text">设计的目的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要的手段？"><span class="nav-number">2.2.</span> <span class="nav-text">主要的手段？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高可用的应用"><span class="nav-number">3.</span> <span class="nav-text">高可用的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#通过负载均衡进行无状态服务的失效转移"><span class="nav-number">3.1.</span> <span class="nav-text">通过负载均衡进行无状态服务的失效转移</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用服务器集群的Session管理"><span class="nav-number">3.2.</span> <span class="nav-text">应用服务器集群的Session管理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高可用的服务"><span class="nav-number">4.</span> <span class="nav-text">高可用的服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高可用的数据"><span class="nav-number">5.</span> <span class="nav-text">高可用的数据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据备份："><span class="nav-number">5.1.</span> <span class="nav-text">数据备份：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#②失效转移："><span class="nav-number">5.2.</span> <span class="nav-text">②失效转移：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高可用的QA"><span class="nav-number">6.</span> <span class="nav-text">高可用的QA</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网站运行监控"><span class="nav-number">7.</span> <span class="nav-text">网站运行监控</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#监控数据采集"><span class="nav-number">7.1.</span> <span class="nav-text">监控数据采集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#监控管理"><span class="nav-number">7.2.</span> <span class="nav-text">监控管理</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -834,7 +879,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">143k</span>
+    <span title="站点总字数">149k</span>
   
 
   
@@ -843,7 +888,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">2:10</span>
+    <span title="站点阅读时长">2:16</span>
   
 </div>
 
