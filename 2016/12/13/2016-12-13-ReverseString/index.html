@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.9.0">
+<!DOCTYPE html><html class="theme-next muse use-motion" lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -477,7 +460,7 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                  <span class="post-meta-item-text">阅读时长 ≈</span>
                 
                 <span title="阅读时长">1 分钟</span>
               
@@ -506,10 +489,10 @@
 <p>例如，字符串 abcdef ，若要让cdef翻转到ab的前头，只要按照下述3个步骤操作即可：</p>
 <ul>
 <li>首先将原字符串分为两个部分，即X:ab，Y:cdef；</li>
-<li>将X反转，X-&gt;X^T，即得：ab-&gt;ba；将Y反转，Y-&gt;Y^T，即得：cdef-&gt;fedc。</li>
+<li>将X反转，X->X^T，即得：ab->ba；将Y反转，Y->Y^T，即得：cdef->fedc。</li>
 <li>反转上述步骤得到的结果字符串X^TY^T，即反转字符串cbafed的两部分（ba和fedc）给予反转，bafedc得到cdefab，形式化表示为(X^TY^T)^T=YX，这就实现了整个反转。</li>
 </ul>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ReverseString</span><span class="params">(&amp;$s, $from, $to)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span> ($from &lt; $to) &#123;</span><br><span class="line">		$t = $s[$from];</span><br><span class="line">		$s[$from++] = $s[$to];</span><br><span class="line">		$s[$to--] = $t;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">LeftRotateString</span><span class="params">(&amp;$s,$n,$m)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	$m %= $n;               </span><br><span class="line">	ReverseString($s, <span class="number">0</span>, $m - <span class="number">1</span>);</span><br><span class="line">	<span class="comment">// echo $s; //bacdef</span></span><br><span class="line">	ReverseString($s, $m, $n - <span class="number">1</span>);</span><br><span class="line">	<span class="comment">// echo $s; //bafedc</span></span><br><span class="line">	ReverseString($s, <span class="number">0</span>, $n - <span class="number">1</span>);</span><br><span class="line">	<span class="comment">// echo $s; //cdefab</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$String = <span class="string">'abcdef'</span>;</span><br><span class="line">$n = <span class="number">6</span>;</span><br><span class="line">$m = <span class="number">2</span>;</span><br><span class="line">LeftRotateString($String,$n,$m);</span><br><span class="line"><span class="comment">// echo $String; //cdefab</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ReverseString</span><span class="params">(&$s, $from, $to)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="keyword">while</span> ($from < $to) {</span><br><span class="line">		$t = $s[$from];</span><br><span class="line">		$s[$from++] = $s[$to];</span><br><span class="line">		$s[$to--] = $t;</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">LeftRotateString</span><span class="params">(&$s,$n,$m)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	$m %= $n;               </span><br><span class="line">	ReverseString($s, <span class="number">0</span>, $m - <span class="number">1</span>);</span><br><span class="line">	<span class="comment">// echo $s; //bacdef</span></span><br><span class="line">	ReverseString($s, $m, $n - <span class="number">1</span>);</span><br><span class="line">	<span class="comment">// echo $s; //bafedc</span></span><br><span class="line">	ReverseString($s, <span class="number">0</span>, $n - <span class="number">1</span>);</span><br><span class="line">	<span class="comment">// echo $s; //cdefab</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">$String = <span class="string">'abcdef'</span>;</span><br><span class="line">$n = <span class="number">6</span>;</span><br><span class="line">$m = <span class="number">2</span>;</span><br><span class="line">LeftRotateString($String,$n,$m);</span><br><span class="line"><span class="comment">// echo $String; //cdefab</span></span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="举一反三"><a href="#举一反三" class="headerlink" title="举一反三"></a>举一反三</h2><ul>
 <li><p>链表翻转。给出一个链表和一个数k，比如，链表为1→2→3→4→5→6，k=2，则翻转后2→1→6→5→4→3，若k=3，翻转后3→2→1→6→5→4，若k=4，翻转后4→3→2→1→6→5，用程序实现。</p>
@@ -784,7 +767,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2016 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">© 2016 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -1375,5 +1358,6 @@
 
   
 
-</body>
-</html>
+
+
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>

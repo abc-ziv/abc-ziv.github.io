@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.9.0">
+<!DOCTYPE html><html class="theme-next muse use-motion" lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -94,13 +77,13 @@
 
 
 
-  <meta name="description" content="可用性度量与考核首先，不得不说：要保证一个网站永远完全可用几乎是一件不可能完成的任务。 如何度量网站可用性？一个神奇的数字—9！你有几个9，就代表了你的可用性。例如QQ可用性达到了4个9：99.99%  2个9=基本可用　　 3个9=较高可用　　 4个9=具有自动恢复能力的高可用　　 5个9=极高可用-&amp;gt;理想状态">
+  <meta name="description" content="可用性度量与考核首先，不得不说：要保证一个网站永远完全可用几乎是一件不可能完成的任务。 如何度量网站可用性？一个神奇的数字—9！你有几个9，就代表了你的可用性。例如QQ可用性达到了4个9：99.99%  2个9=基本可用　　 3个9=较高可用　　 4个9=具有自动恢复能力的高可用　　 5个9=极高可用-&gt;理想状态">
 <meta name="keywords" content="watch,大型网站技术架构：核心原理与案例分析">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《大型网站技术架构》-- 网站的高可用架构">
 <meta property="og:url" content="http://yoursite.com/2019/08/05/2019-08-05-HighAvailabilityArchitecture/index.html">
 <meta property="og:site_name" content="吴藏的博客">
-<meta property="og:description" content="可用性度量与考核首先，不得不说：要保证一个网站永远完全可用几乎是一件不可能完成的任务。 如何度量网站可用性？一个神奇的数字—9！你有几个9，就代表了你的可用性。例如QQ可用性达到了4个9：99.99%  2个9=基本可用　　 3个9=较高可用　　 4个9=具有自动恢复能力的高可用　　 5个9=极高可用-&amp;gt;理想状态">
+<meta property="og:description" content="可用性度量与考核首先，不得不说：要保证一个网站永远完全可用几乎是一件不可能完成的任务。 如何度量网站可用性？一个神奇的数字—9！你有几个9，就代表了你的可用性。例如QQ可用性达到了4个9：99.99%  2个9=基本可用　　 3个9=较高可用　　 4个9=具有自动恢复能力的高可用　　 5个9=极高可用-&gt;理想状态">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/Framework/019.png">
 <meta property="og:image" content="http://yoursite.com/images/Framework/020.jpg">
@@ -113,7 +96,7 @@
 <meta property="og:updated_time" content="2019-08-10T14:09:36.831Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《大型网站技术架构》-- 网站的高可用架构">
-<meta name="twitter:description" content="可用性度量与考核首先，不得不说：要保证一个网站永远完全可用几乎是一件不可能完成的任务。 如何度量网站可用性？一个神奇的数字—9！你有几个9，就代表了你的可用性。例如QQ可用性达到了4个9：99.99%  2个9=基本可用　　 3个9=较高可用　　 4个9=具有自动恢复能力的高可用　　 5个9=极高可用-&amp;gt;理想状态">
+<meta name="twitter:description" content="可用性度量与考核首先，不得不说：要保证一个网站永远完全可用几乎是一件不可能完成的任务。 如何度量网站可用性？一个神奇的数字—9！你有几个9，就代表了你的可用性。例如QQ可用性达到了4个9：99.99%  2个9=基本可用　　 3个9=较高可用　　 4个9=具有自动恢复能力的高可用　　 5个9=极高可用-&gt;理想状态">
 <meta name="twitter:image" content="http://yoursite.com/images/Framework/019.png">
 
 
@@ -502,7 +485,7 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                  <span class="post-meta-item-text">阅读时长 ≈</span>
                 
                 <span title="阅读时长">3 分钟</span>
               
@@ -530,7 +513,7 @@
 <li>2个9=基本可用　　</li>
 <li>3个9=较高可用　　</li>
 <li>4个9=具有自动恢复能力的高可用　　</li>
-<li>5个9=极高可用-&gt;理想状态<a id="more"></a>
+<li>5个9=极高可用->理想状态<a id="more"></a>
 
 </li>
 </ol>
@@ -612,7 +595,7 @@
 <h2 id="监控管理"><a href="#监控管理" class="headerlink" title="监控管理"></a>监控管理</h2><ol>
 <li>系统报警：配置报警阀值和值守人员联系方式，系统发生报警时，即使工程师在千里之外，也可以被及时通知；</li>
 <li>失效转移：监控系统在发现故障时，主动通知应用进行失效转移；</li>
-<li>自动优雅降级：为了应付网站访问高峰，主动关闭部分功能，释放部分系统资源，保证核心应用服务的正常运行；—&gt;网站柔性架构的理想状态</li>
+<li>自动优雅降级：为了应付网站访问高峰，主动关闭部分功能，释放部分系统资源，保证核心应用服务的正常运行；—>网站柔性架构的理想状态</li>
 </ol>
 
       
@@ -879,7 +862,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2016 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">© 2016 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -1470,5 +1453,6 @@
 
   
 
-</body>
-</html>
+
+
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>

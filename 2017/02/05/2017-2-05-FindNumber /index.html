@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.9.0">
+<!DOCTYPE html><html class="theme-next muse use-motion" lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -477,7 +460,7 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                  <span class="post-meta-item-text">阅读时长 ≈</span>
                 
                 <span title="阅读时长">1 分钟</span>
               
@@ -503,15 +486,15 @@
 <a id="more"></a>
 
 <h2 id="分析与解法"><a href="#分析与解法" class="headerlink" title="分析与解法"></a>分析与解法</h2><p>我们以数组<code>[1, 2, 3, 1, 2, 1, 2]</code>举例，将数组元素用二进制表示：<br></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">0 1</span><br><span class="line">1 0</span><br><span class="line">1 1</span><br><span class="line">0 1</span><br><span class="line">1 0</span><br><span class="line">0 1</span><br><span class="line">1 0</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">0 1</span><br><span class="line">1 0</span><br><span class="line">1 1</span><br><span class="line">0 1</span><br><span class="line">1 0</span><br><span class="line">0 1</span><br><span class="line">1 0</span><br></pre></td></tr></tbody></table></figure>
 
 <p>如果理解了上题，此题的思路似乎也就呼之欲出了。我们也可以按位运算，计算1 bit的数量，如果每个数字都出现三次，那么每位上的1 bit数量肯定是3的倍数，相反如果不是3的倍数，那么就是那个特殊的数在捣蛋。<br></p>
 <p>我们似乎需要这么一种“加法”运算，使得每位上的 1 bit 数量能够得到累计，并且累计到了3就自动清零。但是理想是美好的，现实是残酷的，并没有这样一种神奇的运算（三进制？）。<br></p>
 <p>但是我们可以用一个数“辅助”，因为每一位的1 bit数量统计都是类似的，所以假设正在统计某一位的1 bit数量。我们用<code>a</code>来表示 1 bit 的数量，当 1 bit的数量为0时，a=0；当数量为1时，a=1；当数量为2时，a=2？非也，位运算只能表示0和1，所以这时我们引进第二个变量b，我们用b=1来代表已经有了2个 1 bit，所以当有两个 1 bit 时，a=0,b=1。数量统计结果逢3化0，所以只有0、1、2三种结果：<br></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bits数量 a b</span><br><span class="line">   0     0 0</span><br><span class="line">   1     1 0</span><br><span class="line">   2     0 1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bits数量 a b</span><br><span class="line">   0     0 0</span><br><span class="line">   1     1 0</span><br><span class="line">   2     0 1</span><br></pre></td></tr></tbody></table></figure>
 
 <p>思路也就显而易见了，每次运算我们维护a和b的值，运算到最后即可得到结果：<br></p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$c = <span class="keyword">array</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">7</span>);</span><br><span class="line">$a = <span class="number">0</span>;</span><br><span class="line">$b = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">0</span>; $i &lt; count($c); $i++) &#123; </span><br><span class="line">    $b = $a &amp; ($b ^ $c[$i]);</span><br><span class="line">    $a = $b | ($a ^ $c[$i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> $a; <span class="number">7</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$c = <span class="keyword">array</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">7</span>);</span><br><span class="line">$a = <span class="number">0</span>;</span><br><span class="line">$b = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">0</span>; $i < count($c); $i++) { </span><br><span class="line">    $b = $a & ($b ^ $c[$i]);</span><br><span class="line">    $a = $b | ($a ^ $c[$i]);</span><br><span class="line">}</span><br><span class="line"><span class="keyword">echo</span> $a; <span class="number">7</span></span><br></pre></td></tr></tbody></table></figure>
 
 
       
@@ -778,7 +761,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2016 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">© 2016 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -1369,5 +1352,6 @@
 
   
 
-</body>
-</html>
+
+
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
