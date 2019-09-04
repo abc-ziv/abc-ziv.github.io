@@ -1,4 +1,21 @@
-<!DOCTYPE html><html class="theme-next muse use-motion" lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0">
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -77,18 +94,18 @@
 
 
 
-  <meta name="description" content="隔离性（扩展:MVCC/SNAPSHOT ISOLATION） 读已提交 读未提交 可重复读 序列化读 快照隔离界别  用新的方式实现传统意义上读为提交的场景，同时保证可序列化的隔离级别。 写&gt;读时会增加系统成本 Mvcc适合读写比率比较高的情况">
+  <meta name="description" content="隔离性（扩展:MVCC/SNAPSHOT ISOLATION） 读已提交 读未提交 可重复读 序列化读 快照隔离界别  用新的方式实现传统意义上读为提交的场景，同时保证可序列化的隔离级别。 写&amp;gt;读时会增加系统成本 Mvcc适合读写比率比较高的情况">
 <meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="细说事物(第二天)">
 <meta property="og:url" content="http://yoursite.com/2017/10/28/2017-10-28-transactionTwo/index.html">
 <meta property="og:site_name" content="吴藏的博客">
-<meta property="og:description" content="隔离性（扩展:MVCC/SNAPSHOT ISOLATION） 读已提交 读未提交 可重复读 序列化读 快照隔离界别  用新的方式实现传统意义上读为提交的场景，同时保证可序列化的隔离级别。 写&gt;读时会增加系统成本 Mvcc适合读写比率比较高的情况">
+<meta property="og:description" content="隔离性（扩展:MVCC/SNAPSHOT ISOLATION） 读已提交 读未提交 可重复读 序列化读 快照隔离界别  用新的方式实现传统意义上读为提交的场景，同时保证可序列化的隔离级别。 写&amp;gt;读时会增加系统成本 Mvcc适合读写比率比较高的情况">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-10-28T04:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="细说事物(第二天)">
-<meta name="twitter:description" content="隔离性（扩展:MVCC/SNAPSHOT ISOLATION） 读已提交 读未提交 可重复读 序列化读 快照隔离界别  用新的方式实现传统意义上读为提交的场景，同时保证可序列化的隔离级别。 写&gt;读时会增加系统成本 Mvcc适合读写比率比较高的情况">
+<meta name="twitter:description" content="隔离性（扩展:MVCC/SNAPSHOT ISOLATION） 读已提交 读未提交 可重复读 序列化读 快照隔离界别  用新的方式实现传统意义上读为提交的场景，同时保证可序列化的隔离级别。 写&amp;gt;读时会增加系统成本 Mvcc适合读写比率比较高的情况">
 
 
 
@@ -460,7 +477,7 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 ≈</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">1 分钟</span>
               
@@ -490,7 +507,7 @@
 <li>快照隔离界别<blockquote>
 <ul>
 <li>用新的方式实现传统意义上读为提交的场景，同时保证可序列化的隔离级别。</li>
-<li>写>读时会增加系统成本</li>
+<li>写&gt;读时会增加系统成本</li>
 <li>Mvcc适合读写比率比较高的情况</li>
 </ul>
 </blockquote>
@@ -532,8 +549,8 @@
 <h3 id="事务的调优原则"><a href="#事务的调优原则" class="headerlink" title="事务的调优原则"></a>事务的调优原则</h3><ol>
 <li>在不影响业务应用的前提下<ul>
 <li>减少锁的覆盖范围</li>
-<li>Myisam表锁->Innodb行锁</li>
-<li>原子锁->MVCC多版本</li>
+<li>Myisam表锁-&gt;Innodb行锁</li>
+<li>原子锁-&gt;MVCC多版本</li>
 </ul>
 </li>
 <li>增加锁上可并行线程数<ul>
@@ -822,7 +839,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">© 2016 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2016 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -848,7 +865,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
@@ -1413,6 +1430,5 @@
 
   
 
-
-
-<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
+<script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

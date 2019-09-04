@@ -1,4 +1,21 @@
-<!DOCTYPE html><html class="theme-next muse use-motion" lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0">
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -476,7 +493,7 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 ≈</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">1 分钟</span>
               
@@ -500,20 +517,20 @@
       
         <p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br> <a id="more"></a></p>
 <p>更新yay</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yay -Syy</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yay -Syy</span><br></pre></td></tr></table></figure>
 
-<h3 id="下载-git-nodejs-npm"><a href="#下载-git-nodejs-npm" class="headerlink" title="下载  git nodejs npm"></a>下载  git nodejs npm</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$  yay -S git nodejs npm</span><br><span class="line">$ git --version</span><br><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="下载-git-nodejs-npm"><a href="#下载-git-nodejs-npm" class="headerlink" title="下载  git nodejs npm"></a>下载  git nodejs npm</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$  yay -S git nodejs npm</span><br><span class="line">$ git --version</span><br><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
 
 <p>更换npm源</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
 
-<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo cnpm install -g hexo-cli</span><br><span class="line">$ hexo -v</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo cnpm install -g hexo-cli</span><br><span class="line">$ hexo -v</span><br></pre></td></tr></table></figure>
 
-<h3 id="创建项目（blog）"><a href="#创建项目（blog）" class="headerlink" title="创建项目（blog）"></a>创建项目（blog）</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line"><span class="comment">#安装依赖</span></span><br><span class="line">$ npm install</span><br><span class="line">$ npm audit fix</span><br><span class="line"><span class="comment"># 生成</span></span><br><span class="line">$ hexo g</span><br><span class="line"><span class="comment"># 清缓存</span></span><br><span class="line">$ hexo clean</span><br><span class="line"><span class="comment"># 部署</span></span><br><span class="line">$ hexo d</span><br><span class="line"><span class="comment"># 启动</span></span><br><span class="line">$ hexo s</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="创建项目（blog）"><a href="#创建项目（blog）" class="headerlink" title="创建项目（blog）"></a>创建项目（blog）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line"><span class="comment">#安装依赖</span></span><br><span class="line">$ npm install</span><br><span class="line">$ npm audit fix</span><br><span class="line"><span class="comment"># 生成</span></span><br><span class="line">$ hexo g</span><br><span class="line"><span class="comment"># 清缓存</span></span><br><span class="line">$ hexo clean</span><br><span class="line"><span class="comment"># 部署</span></span><br><span class="line">$ hexo d</span><br><span class="line"><span class="comment"># 启动</span></span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 
-<h3 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br><span class="line"><span class="comment"># 配置主题</span></span><br><span class="line">$ vi _config.yml</span><br><span class="line"><span class="comment"># 设置主题</span></span><br><span class="line">theme : next</span><br><span class="line"><span class="comment"># 设置语音</span></span><br><span class="line">language: zh-CN</span><br><span class="line"><span class="comment"># 设置头像</span></span><br><span class="line">avatar:</span><br><span class="line">...</span><br><span class="line">url: /images/avatar.png</span><br><span class="line"><span class="comment"># 更新主题</span></span><br><span class="line">$ <span class="built_in">cd</span> themes/next</span><br><span class="line">$ git pull</span><br><span class="line"><span class="comment"># 开启标签/分类</span></span><br><span class="line">$ vi _config.yml</span><br><span class="line">  tags: /tags/ || tags</span><br><span class="line">  categories: /categories/ || th</span><br><span class="line">$ <span class="built_in">cd</span> ../</span><br><span class="line"><span class="comment"># 配置标签</span></span><br><span class="line">$ hexo new page tags</span><br><span class="line">$ vi hexo/<span class="built_in">source</span>/tags/index.md</span><br><span class="line">title: 标签</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line"><span class="built_in">type</span>: <span class="string">"tags"</span></span><br><span class="line">comments: <span class="literal">false</span></span><br><span class="line"><span class="comment">#配置分类</span></span><br><span class="line">$ hexo new page categories</span><br><span class="line">$ vi hexo/<span class="built_in">source</span>/categories/index.md</span><br><span class="line">title: 分类</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line"><span class="built_in">type</span>: <span class="string">"categories"</span></span><br><span class="line">comments: <span class="literal">false</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br><span class="line"><span class="comment"># 配置主题</span></span><br><span class="line">$ vi _config.yml</span><br><span class="line"><span class="comment"># 设置主题</span></span><br><span class="line">theme : next</span><br><span class="line"><span class="comment"># 设置语音</span></span><br><span class="line">language: zh-CN</span><br><span class="line"><span class="comment"># 设置头像</span></span><br><span class="line">avatar:</span><br><span class="line">...</span><br><span class="line">url: /images/avatar.png</span><br><span class="line"><span class="comment"># 更新主题</span></span><br><span class="line">$ <span class="built_in">cd</span> themes/next</span><br><span class="line">$ git pull</span><br><span class="line"><span class="comment"># 开启标签/分类</span></span><br><span class="line">$ vi _config.yml</span><br><span class="line">  tags: /tags/ || tags</span><br><span class="line">  categories: /categories/ || th</span><br><span class="line">$ <span class="built_in">cd</span> ../</span><br><span class="line"><span class="comment"># 配置标签</span></span><br><span class="line">$ hexo new page tags</span><br><span class="line">$ vi hexo/<span class="built_in">source</span>/tags/index.md</span><br><span class="line">title: 标签</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line"><span class="built_in">type</span>: <span class="string">"tags"</span></span><br><span class="line">comments: <span class="literal">false</span></span><br><span class="line"><span class="comment">#配置分类</span></span><br><span class="line">$ hexo new page categories</span><br><span class="line">$ vi hexo/<span class="built_in">source</span>/categories/index.md</span><br><span class="line">title: 分类</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line"><span class="built_in">type</span>: <span class="string">"categories"</span></span><br><span class="line">comments: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="github-发布"><a href="#github-发布" class="headerlink" title="github 发布"></a>github 发布</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">$ vi _config.yml</span><br><span class="line">deploy：</span><br><span class="line">  <span class="built_in">type</span>： git    </span><br><span class="line">  repo： <repository  url>   <span class="comment">#https：//bitbucket.org/JohnSmith/johnsmith.bitbucket.io </span></span><br><span class="line">  branch： [branch]  <span class="comment">#published </span></span><br><span class="line">  message： [message]   <span class="comment">#leave this blank</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="github-发布"><a href="#github-发布" class="headerlink" title="github 发布"></a>github 发布</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">$ vi _config.yml</span><br><span class="line">deploy：</span><br><span class="line">  <span class="built_in">type</span>： git    </span><br><span class="line">  repo： &lt;repository  url&gt;   <span class="comment">#https：//bitbucket.org/JohnSmith/johnsmith.bitbucket.io </span></span><br><span class="line">  branch： [branch]  <span class="comment">#published </span></span><br><span class="line">  message： [message]   <span class="comment">#leave this blank</span></span><br></pre></td></tr></table></figure>
 
 
       
@@ -778,7 +795,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">© 2016 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2016 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -804,7 +821,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
@@ -1369,6 +1386,5 @@
 
   
 
-
-
-<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
+<script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

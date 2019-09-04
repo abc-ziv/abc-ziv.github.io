@@ -1,4 +1,21 @@
-<!DOCTYPE html><html class="theme-next muse use-motion" lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0">
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -80,14 +97,14 @@
   <meta name="description" content="With all of the love and proclamations about REST, we can sometimes forget that it’s simply one of many options. REST is a very good standard for a wide variety of APIs, but there are other API design">
 <meta name="keywords" content="watch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="When to Use What: REST, GraphQL, Webhooks, & gRPC">
+<meta property="og:title" content="When to Use What: REST, GraphQL, Webhooks, &amp; gRPC">
 <meta property="og:url" content="http://yoursite.com/2019/07/05/2019-07-05-REST,GraphQL,Webhooks,gRPC/index.html">
 <meta property="og:site_name" content="吴藏的博客">
 <meta property="og:description" content="With all of the love and proclamations about REST, we can sometimes forget that it’s simply one of many options. REST is a very good standard for a wide variety of APIs, but there are other API design">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-07-05T07:54:52.917Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="When to Use What: REST, GraphQL, Webhooks, & gRPC">
+<meta name="twitter:title" content="When to Use What: REST, GraphQL, Webhooks, &amp; gRPC">
 <meta name="twitter:description" content="With all of the love and proclamations about REST, we can sometimes forget that it’s simply one of many options. REST is a very good standard for a wide variety of APIs, but there are other API design">
 
 
@@ -464,7 +481,7 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 ≈</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">13 分钟</span>
               
@@ -500,7 +517,7 @@
 </blockquote>
 <h2 id="Real-World-Example-PayPal"><a href="#Real-World-Example-PayPal" class="headerlink" title="Real-World Example: PayPal"></a>Real-World Example: PayPal</h2><p>One example of this type of API is the PayPal REST API. PayPal has a strong core business function — provide the integrated systems for payment processing. Accordingly, their APIs have to make this easy. Resources must be easily identifiable, calls must be understood with and without context, and most importantly, a variety of media must be supported in order to effectively handle a wide range of payment types and methodologies.</p>
 <p>To this end, the PayPal API is designed to be easy to understand and easy to integrate with. Look at this example, taken from their documentation, in which a call lists a range of activities within the API:</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -v -X GET https://api.sandbox.paypal.com/v1/activities/activities?start_time=2012-01-01T00:00:01.000Z&amp;end_time=2014-10-01T23:59:59.999Z&amp;page_size=10 </span><br><span class="line">-H <span class="string">"Content-Type: application/json"</span> </span><br><span class="line">-H <span class="string">"Authorization: Bearer Access-Token"</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -v -X GET https://api.sandbox.paypal.com/v1/activities/activities?start_time=2012-01-01T00:00:01.000Z&amp;amp;end_time=2014-10-01T23:59:59.999Z&amp;amp;page_size=10 </span><br><span class="line">-H <span class="string">"Content-Type: application/json"</span> </span><br><span class="line">-H <span class="string">"Authorization: Bearer Access-Token"</span></span><br></pre></td></tr></table></figure>
 
 <p>Here, we can see the hallmarks of an effective RESTful implementation. We can see a standard HTTP verbiage form in GET doing exactly what GET should do — retrieve a resource. The URI in this case is well defined as “activities”, and allows for specification of a time zone and in-line request constraints for page size. Additionally, the return is in a specified, known, hypermedia-supporting format. This is REST in a nutshell, and is an example of a use case in which a lightweight, stateless system is exactly what is needed to deliver the resources to the end client.</p>
 <h1 id="gRPC"><a href="#gRPC" class="headerlink" title="gRPC"></a>gRPC</h1><p>While REST is decidedly modern, <code>gRPC</code> is actually a new take on an old approach known as <code>RPC</code>, or Remote Procedure Call. RPC is a method for executing a procedure on a remote server, somewhat akin to running a program on a friend’s computer miles from your workstation. This has its own benefits and drawbacks – these very drawbacks were key in the development and implementation of REST, in fact, alongside other issues inherent in systems like SOAP.</p>
@@ -804,7 +821,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">© 2016 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2016 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -830,7 +847,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
@@ -1395,6 +1412,5 @@
 
   
 
-
-
-<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
+<script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

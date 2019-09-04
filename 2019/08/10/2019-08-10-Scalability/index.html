@@ -1,4 +1,21 @@
-<!DOCTYPE html><html class="theme-next muse use-motion" lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0">
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -478,7 +495,7 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 ≈</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">4 分钟</span>
               
@@ -503,14 +520,14 @@
         <h1 id="网站架构的伸缩性设计"><a href="#网站架构的伸缩性设计" class="headerlink" title="网站架构的伸缩性设计"></a>网站架构的伸缩性设计</h1><h2 id="不同功能进行物理分离实现伸缩"><a href="#不同功能进行物理分离实现伸缩" class="headerlink" title="不同功能进行物理分离实现伸缩"></a>不同功能进行物理分离实现伸缩</h2><ul>
 <li>纵向分离：将业务处理流程上得不同部分分离部署，实现系统的伸缩性；</li>
 </ul>
-<img src="/images/Framework/027.jpg">
+<img src="/images/loading.gif" data-original="/images/Framework/027.jpg">
 
 <a id="more"></a>
 
 <ul>
 <li>横向分离：将不同的业务模块分离部署，实现系统的伸缩性；</li>
 </ul>
-<img src="/images/Framework/028.jpg">
+<img src="/images/loading.gif" data-original="/images/Framework/028.jpg">
 
 <h2 id="单一功通过集群规模实现伸缩"><a href="#单一功通过集群规模实现伸缩" class="headerlink" title="单一功通过集群规模实现伸缩"></a>单一功通过集群规模实现伸缩</h2><p>使用服务器集群，即将相同服务部署在多台服务器上构成一个集群整体对外提供服务。具体来说，集群伸缩性又分为应用服务器集群伸缩性和数据服务器集群伸缩性。这两种集群对于数据状态管理的不同，技术实现也有很大的区别。</p>
 <blockquote>
@@ -525,7 +542,7 @@
 </li>
 </ol>
 <h2 id="负载均衡技术—网站必不可少的基础技术手段"><a href="#负载均衡技术—网站必不可少的基础技术手段" class="headerlink" title="负载均衡技术—网站必不可少的基础技术手段"></a>负载均衡技术—网站必不可少的基础技术手段</h2><p>负载均衡的实现方式多种多样，从硬件到软件，从商业产品到开源产品，应有尽有。但是，实现负载均衡的基础技术不外乎以下几种：</p>
-<h3 id="1-HTTP重定向负载均衡"><a href="#1-HTTP重定向负载均衡" class="headerlink" title="1. HTTP重定向负载均衡"></a>1. HTTP重定向负载均衡</h3><img src="/images/Framework/029.jpg">
+<h3 id="1-HTTP重定向负载均衡"><a href="#1-HTTP重定向负载均衡" class="headerlink" title="1. HTTP重定向负载均衡"></a>1. HTTP重定向负载均衡</h3><img src="/images/loading.gif" data-original="/images/Framework/029.jpg">
 
 <p>此方案的优点是简单易行，缺点是：</p>
 <ul>
@@ -533,7 +550,7 @@
 <li>重定向服务器自身的处理能力有可能成为瓶颈，整个集群的伸缩性规模有限；</li>
 <li>使用HTTP 302重定向有可能使搜索引擎判断为SEO作弊，<code>降低搜索排名；</code></li>
 </ul>
-<h3 id="2-DNS域名解析负载均衡"><a href="#2-DNS域名解析负载均衡" class="headerlink" title="2. DNS域名解析负载均衡"></a>2. DNS域名解析负载均衡</h3><img src="/images/Framework/030.jpg">
+<h3 id="2-DNS域名解析负载均衡"><a href="#2-DNS域名解析负载均衡" class="headerlink" title="2. DNS域名解析负载均衡"></a>2. DNS域名解析负载均衡</h3><img src="/images/loading.gif" data-original="/images/Framework/030.jpg">
 
 <p>此方案要求在DNS服务器中配置多个A记录，优点是将负载均衡的工作转交给了DNS，省掉了网站管理维护负载均衡服务器的麻烦。而缺点是：</p>
 <ul>
@@ -543,14 +560,14 @@
 </blockquote>
 </li>
 </ul>
-<h3 id="3-反向代理负载均衡"><a href="#3-反向代理负载均衡" class="headerlink" title="3. 反向代理负载均衡"></a>3. 反向代理负载均衡</h3><img src="/images/Framework/031.jpg">
+<h3 id="3-反向代理负载均衡"><a href="#3-反向代理负载均衡" class="headerlink" title="3. 反向代理负载均衡"></a>3. 反向代理负载均衡</h3><img src="/images/loading.gif" data-original="/images/Framework/031.jpg">
 Web服务器不需要使用外部IP地址，而反向代理服务器则需要配置双网卡和内外部两套IP地址。
 此方案的优点是和反向代理服务器功能集成在一起，部署简单。缺点是反向代理服务器是所有请求和响应的中转站，`其性能可能会成为瓶颈`。
 
-<h3 id="4-IP负载均衡"><a href="#4-IP负载均衡" class="headerlink" title="4. IP负载均衡"></a>4. IP负载均衡</h3><img src="/images/Framework/032.jpg">
+<h3 id="4-IP负载均衡"><a href="#4-IP负载均衡" class="headerlink" title="4. IP负载均衡"></a>4. IP负载均衡</h3><img src="/images/loading.gif" data-original="/images/Framework/032.jpg">
 此方案优点在于在`内核进程`完成数据分发，较反向代理负载均衡（在应用程序中分发数据）有更好的处理性能。缺点是由于所有请求响应都需要经过负载均衡服务器，集群的最大响应数据吞吐量不得不`受制于负载均衡服务器网卡带宽`。
 
-<h3 id="5-数据链路层负载均衡"><a href="#5-数据链路层负载均衡" class="headerlink" title="5. 数据链路层负载均衡"></a>5. 数据链路层负载均衡</h3><img src="/images/Framework/033.jpg">
+<h3 id="5-数据链路层负载均衡"><a href="#5-数据链路层负载均衡" class="headerlink" title="5. 数据链路层负载均衡"></a>5. 数据链路层负载均衡</h3><img src="/images/loading.gif" data-original="/images/Framework/033.jpg">
 此种方式又称作`三角传输模式`，负载均衡数据分发过程中不修改IP地址，只修改mac地址，由于实际处理请求的真实物理IP地址和数据请求目的IP地址一致，所以不需要通过负载均衡服务器进行地址转换，可将响应数据包直接返回给用户浏览器，避免负载均衡服务器网卡带宽成为瓶颈。这种负载均衡方式又称作`直接路由方式（DR）`。
 
 <p>使用三角传输模式的链路层负载均衡是目前大型网站使用最广泛的一种负载均衡手段。在Linux平台上最好的链路层负载均衡开源产品是<code>LVS（Linux Virutal Server）</code>。</p>
@@ -562,7 +579,7 @@ Web服务器不需要使用外部IP地址，而反向代理服务器则需要配
 <h3 id="5-源地址散列"><a href="#5-源地址散列" class="headerlink" title="5.源地址散列"></a>5.源地址散列</h3><p>　　根据请求来源的IP地址进行Hash计算得到应用服务器，这样来自同一个IP地址的请求总在同一个服务器上处理，该请求的上下文信息可以存储在这台服务器上，在一个会话周期内重复使用，从而实现会话粘滞。</p>
 <h1 id="分布式缓存集群的伸缩性设计"><a href="#分布式缓存集群的伸缩性设计" class="headerlink" title="分布式缓存集群的伸缩性设计"></a>分布式缓存集群的伸缩性设计</h1><p>不同于应用服务器集群的伸缩性设计，分布式缓存集群的伸缩性不能使用简单的负载均衡手段来实现。因为：分布式缓存服务器集群中缓存的数据各不相同，缓存访问请求不可以在缓存服务器集群中的任意一台处理，必须先找到缓存有需要的数据的服务器，然后才能访问。</p>
 <p>分布式缓存集群伸缩性设计的目标：让新上线的缓存服务器对整个分布式缓存集群影响最小，也就是说新加入缓存服务器后应使整个缓存服务器集群中已经缓存的数据尽可能还被访问到。</p>
-<h3 id="1-以Memcached为代表的分布式缓存集群的访问模型"><a href="#1-以Memcached为代表的分布式缓存集群的访问模型" class="headerlink" title="1. 以Memcached为代表的分布式缓存集群的访问模型"></a>1. 以Memcached为代表的分布式缓存集群的访问模型</h3><img src="/images/Framework/034.jpg">
+<h3 id="1-以Memcached为代表的分布式缓存集群的访问模型"><a href="#1-以Memcached为代表的分布式缓存集群的访问模型" class="headerlink" title="1. 以Memcached为代表的分布式缓存集群的访问模型"></a>1. 以Memcached为代表的分布式缓存集群的访问模型</h3><img src="/images/loading.gif" data-original="/images/Framework/034.jpg">
 以上图片展示了一个典型的缓存写操作，应用程序需要写缓存数据<'chengdu',data>，API将KEY（'CHENGDU'）输入路由算法模块，路由算法根据KEY和Memcached服务器集群列表计算得到一台服务器编号（如Node1），进而得到该机器的IP地址和端口（10.0.0.1:91000）。然后，API调用通信模块和编号为Node1的Memcached服务器进行通信，将数据<'chengdu',data>写入该服务器，至此便完成了一次分布式缓存的写操作。
 
 <p>而读操作和写操作一样，使用同样的路由算法和服务器列表，只要提供相同的KEY（如上面提到的’CHENGDU’），Memcached客户端总是访问相通的服务器（如上面计算得到的Node1）去读取数据。</p>
@@ -574,13 +591,13 @@ Web服务器不需要使用外部IP地址，而反向代理服务器则需要配
 <h1 id="数据存储服务器集群的伸缩性设计"><a href="#数据存储服务器集群的伸缩性设计" class="headerlink" title="数据存储服务器集群的伸缩性设计"></a>数据存储服务器集群的伸缩性设计</h1><p>首先，数据存储服务器必须保证数据的可靠存储，任何情况下都必须保证数据的可用性和正确性。因此，缓存服务器集群的伸缩性架构方案不能直接适用于数据库等存储服务器。</p>
 <h2 id="关系数据库集群的伸缩性设计"><a href="#关系数据库集群的伸缩性设计" class="headerlink" title="关系数据库集群的伸缩性设计"></a>关系数据库集群的伸缩性设计</h2><ol>
 <li><p>市场上主要的关系数据库都支持数据复制功能，使用这个功能可以对数据库进行简单伸缩。下图显示了使用数据复制的MySQL集群伸缩性方案：多台MySQL的角色有主从之分，写操作都在主服务器上，由主服务器将数据同步到集群中其他从服务器。而读操作及数据分析等离线操作都会在从服务器上完成。</p>
-<img src="/images/Framework/035.jpg">
+<img src="/images/loading.gif" data-original="/images/Framework/035.jpg">
 </li>
 <li><p>前面提到的业务分割模式也可以用在数据库，不同业务数据表部署在不同的数据库集群上，这就是所谓的“数据分库”；但是其有一个制约条件：跨库的表无法进行Join操作；</p>
-<img src="/images/Framework/001.gif">
+<img src="/images/loading.gif" data-original="/images/Framework/001.gif">
 </li>
 <li><p>在实际运维中，对一些单表数据仍然很大的表，例如Facebook的用户数据库、淘宝的商品数据库等，还需要进行分片，将一张表拆分开分别存储在多个数据库中，这就是所谓的“数据分片”；</p>
-<img src="/images/Framework/002.gif">
+<img src="/images/loading.gif" data-original="/images/Framework/002.gif">
 
 </li>
 </ol>
@@ -590,15 +607,15 @@ Web服务器不需要使用外部IP地址，而反向代理服务器则需要配
 <li>事务的一致性保证（ACID）；</li>
 </ul>
 <p>与之对应的是强化一些大型网站更关注的特性：<code>高可用性和可伸缩性</code>；</p>
-<p>开源社区的NoSQL产品不尽其数，其支持的数据结构和伸缩性特性也各不相同。目前看来，应用最广泛的是Apache HBase。HBase的伸缩性主要依赖于其可分裂的HRegion及可伸缩的分布式文件系统HDFS.<br><img src="/images/Framework/036.jpg"></p>
+<p>开源社区的NoSQL产品不尽其数，其支持的数据结构和伸缩性特性也各不相同。目前看来，应用最广泛的是Apache HBase。HBase的伸缩性主要依赖于其可分裂的HRegion及可伸缩的分布式文件系统HDFS.<br><img src="/images/loading.gif" data-original="/images/Framework/036.jpg"></p>
 <p>上图是HBase的整体架构图：</p>
 <ol>
 <li>HBase中数据以<code>HRegion为单位</code>进行管理，也就是说应用程序如果想要访问一个数据，必须先找到HRegion，然后将数据读写操作提交给HRegion，由HRegion完成存储层面的数据操作。</li>
 <li>每个HRegion中存储一段Key区间（例如：[Key1,Key2)）的数据，HRegionServer是物理服务器，每个HRegionServer上可以启动多个HRegion实例。当<code>一个HRegion中写入的数据太多，达到配置的阀值时，HRegion会分裂成两个HRegion</code>，并将HRegion在整个集群中进行迁移，以使HRegionServer的负载均衡。</li>
-<li>所有的<code>HRegion的信息都</code>（例如：存储的Key值区间、所在HRegionServer的IP地址和端口号等）记录在<code>HMaster服务器</code>上。同时为了保证高可用，HBase启动了多个HMaster，并通过ZooKeeper（一个支持分布式一致性的数据管理服务）选举出一个主服务器，通过这个主HMaster服务器获得Key值所在的HRegionServer，最后请求该HRegionServer上的HRegion实例，获得需要的数据。其具体的数据寻址访问流程如下图所示：<img src="/images/Framework/037.jpg">
+<li>所有的<code>HRegion的信息都</code>（例如：存储的Key值区间、所在HRegionServer的IP地址和端口号等）记录在<code>HMaster服务器</code>上。同时为了保证高可用，HBase启动了多个HMaster，并通过ZooKeeper（一个支持分布式一致性的数据管理服务）选举出一个主服务器，通过这个主HMaster服务器获得Key值所在的HRegionServer，最后请求该HRegionServer上的HRegion实例，获得需要的数据。其具体的数据寻址访问流程如下图所示：<img src="/images/loading.gif" data-original="/images/Framework/037.jpg">
 </li>
 </ol>
-<!--'chengdu',data--><!--'chengdu',data-->
+</'chengdu',data></'chengdu',data>
       
     </div>
 
@@ -863,7 +880,7 @@ Web服务器不需要使用外部IP地址，而反向代理服务器则需要配
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">© 2016 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2016 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -889,7 +906,7 @@ Web服务器不需要使用外部IP地址，而反向代理服务器则需要配
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
@@ -1454,6 +1471,5 @@ Web服务器不需要使用外部IP地址，而反向代理服务器则需要配
 
   
 
-
-
-<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
+<script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>
