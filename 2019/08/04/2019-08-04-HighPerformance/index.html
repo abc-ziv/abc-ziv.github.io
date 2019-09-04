@@ -548,8 +548,8 @@
 <li>CSS放页面最上面，JS放页面最下面：浏览器会在下载完全部CSS之后才开始对整个页面进行渲染，因此最好将CSS放在页面最上面；而浏览器在加载JS后会立即执行，有可能会阻塞整个页面，造成页面显示缓慢，因此最好将JS放在页面最下面；</li>
 <li>减少Cookie传输：一方面，太大的Cookie会严重影响数据传输；另一方面，对于某些静态资源的访问（如CSS、JS等）发送Cookie没有意义；</li>
 </ol>
-<h2 id="CDN加速："><a href="#CDN加速：" class="headerlink" title="CDN加速："></a>CDN加速：</h2><p>CDN（内容分发网络）仍然是一个缓存，它将数据缓存在离用户最近的地方，便于用户以最快速度获取数据。即所谓的“网络访问第一跳”，如下图所示：<br><img src="/images/loading.gif" data-original="/images/Framework/012.jpg"><br><code>CDN只将访问频度很高的热点内容（例如：图片、视频、CSS、JS脚本等访问频度很高的内容）进行缓存</code>，可以极大地加快用户访问速度，减少数据中心负载。</p>
-<h2 id="反向代理："><a href="#反向代理：" class="headerlink" title="反向代理："></a>反向代理：</h2><p>反向代理服务器位于网站机房，代理网站Web服务器接收Http请求，对请求进行转发，如下图所示：<br><img src="/images/loading.gif" data-original="/images/Framework/013.png"><br>反向代理服务器具有以下功能：</p>
+<h2 id="CDN加速："><a href="#CDN加速：" class="headerlink" title="CDN加速："></a>CDN加速：</h2><p>CDN（内容分发网络）仍然是一个缓存，它将数据缓存在离用户最近的地方，便于用户以最快速度获取数据。即所谓的“网络访问第一跳”，如下图所示：<br><img src="/images/loading.jpeg" data-original="/images/Framework/012.jpg"><br><code>CDN只将访问频度很高的热点内容（例如：图片、视频、CSS、JS脚本等访问频度很高的内容）进行缓存</code>，可以极大地加快用户访问速度，减少数据中心负载。</p>
+<h2 id="反向代理："><a href="#反向代理：" class="headerlink" title="反向代理："></a>反向代理：</h2><p>反向代理服务器位于网站机房，代理网站Web服务器接收Http请求，对请求进行转发，如下图所示：<br><img src="/images/loading.jpeg" data-original="/images/Framework/013.png"><br>反向代理服务器具有以下功能：</p>
 <ol>
 <li>保护网站安全：任何来自Internet的请求都必须先经过代理服务器；</li>
 <li>通过配置缓存功能加速Web请求：减轻真实Web服务器的负载压力；</li>
@@ -559,14 +559,14 @@
 <p>PS：网站性能优化第一定律：<code>优先考虑使用缓存优化性能</code>。缓存是指将数据存储在相对较高访问速度的存储介质中（如内存），以供系统进行快速处理响应用户请求。</p>
 </blockquote>
 <ol>
-<li>缓存本质是一个<code>内存Hash表</code>，数据以(Key,Value)形式存储在内存中。<img src="/images/loading.gif" data-original="/images/Framework/014.png"></li>
+<li>缓存本质是一个<code>内存Hash表</code>，数据以(Key,Value)形式存储在内存中。<img src="/images/loading.jpeg" data-original="/images/Framework/014.png"></li>
 <li>缓存主要用来存放那些<code>读写比很高、很少变化</code>的数据，如商品的类目信息、热门商品信息等。这样，应用程序读取数据时，先到缓存中取，如缓存中没有或失效，再到数据库中取出，重新写入缓存以供下一次访问。因此，可以很好地<code>改善系统性能，提高数据读取速度，降低存储访问压力</code>。</li>
 <li>分布式缓存架构：一方面是以以JBoss Cache为代表的<code>互相通信</code>派；另一方面是以Memcached为代表的<code>互不通信</code>派；</li>
 </ol>
-<p>JBoss Cache需要将缓存信息同步到集群中的所有机器，代价比较大；而Memcached采用一种集中式的缓存集群管理，缓存与应用分离部署，应用程序通过<code>一致性Hash算法</code>选择缓存服务器远程访问缓存数据，缓存服务器之间互不通信，因而集群规模可以轻易地扩容，具有良好的伸缩性。<br><img src="/images/loading.gif" data-original="/images/Framework/015.png"><br>Memcached由两个核心组件组成：服务端（ms）和客户端（mc），在一个memcached的查询中，mc先通过计算key的hash值来确定kv对所处在的ms位置。当ms确定后，客户端就会发送一个查询请求给对应的ms，让它来查找确切的数据。因为这之间没有交互以及多播协议，所以 memcached交互带给网络的影响是最小化的。<br><img src="/images/loading.gif" data-original="/images/Framework/016.jpg"></p>
+<p>JBoss Cache需要将缓存信息同步到集群中的所有机器，代价比较大；而Memcached采用一种集中式的缓存集群管理，缓存与应用分离部署，应用程序通过<code>一致性Hash算法</code>选择缓存服务器远程访问缓存数据，缓存服务器之间互不通信，因而集群规模可以轻易地扩容，具有良好的伸缩性。<br><img src="/images/loading.jpeg" data-original="/images/Framework/015.png"><br>Memcached由两个核心组件组成：服务端（ms）和客户端（mc），在一个memcached的查询中，mc先通过计算key的hash值来确定kv对所处在的ms位置。当ms确定后，客户端就会发送一个查询请求给对应的ms，让它来查找确切的数据。因为这之间没有交互以及多播协议，所以 memcached交互带给网络的影响是最小化的。<br><img src="/images/loading.jpeg" data-original="/images/Framework/016.jpg"></p>
 <h2 id="异步操作："><a href="#异步操作：" class="headerlink" title="异步操作："></a>异步操作：</h2><ol>
 <li><p>使用<code>消息队列</code>将调用异步化，可改善网站的扩展性，还可改善网站性能；</p>
-<img src="/images/loading.gif" data-original="/images/Framework/017.jpg">
+<img src="/images/loading.jpeg" data-original="/images/Framework/017.jpg">
 </li>
 <li><p>消息队列具有<code>削峰</code>的作用-&gt;将短时间高并发产生的事务消息存储在消息队列中，从而削平高峰期的并发事务；</p>
 <blockquote>
@@ -576,7 +576,7 @@
 </ol>
 <h2 id="使用集群："><a href="#使用集群：" class="headerlink" title="使用集群："></a>使用集群：</h2><ol>
 <li><p>在高并发场景下，使用<code>负载均衡</code>技术为一个应用构建多台服务器组成的服务器集群；</p>
-<img src="/images/loading.gif" data-original="/images/Framework/018.jpg">
+<img src="/images/loading.jpeg" data-original="/images/Framework/018.jpg">
 </li>
 <li><p>可以避免单一服务器因负载压力过大而响应缓慢，使用户请求具有<code>更好的响应延迟特性</code>；</p>
 </li>
